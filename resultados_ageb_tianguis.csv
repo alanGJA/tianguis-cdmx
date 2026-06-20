@@ -1,0 +1,50 @@
+# Tianguis CDMX — Nivel socioeconómico y distribución geográfica (2023)
+
+Análisis de autocorrelación espacial entre el **nivel socioeconómico** (Índice de Rezago
+Social, CONEVAL) y la **densidad de tianguis** de la Ciudad de México, a nivel de **AGEB
+urbana**, mediante el Índice de Moran (global y bivariado) e indicadores LISA.
+
+Proyecto de **Metodología de la Investigación** — ESCOM-IPN, Grupo 5AM1.
+
+## 🗺️ Mapa interactivo
+
+El mapa interactivo (elaboración propia, solo Ciudad de México) se publica con GitHub Pages:
+
+**https://alangja.github.io/tianguis-cdmx/**
+
+Representa los tianguis georreferenciados como puntos coloreados por día de operación, con
+filtros por día y por alcaldía, conteo en vivo y capas seleccionables por AGEB (Grado de
+Rezago Social, índice de rezago continuo, densidad de tianguis y LISA bivariado).
+
+## 📁 Estructura
+
+```
+tianguis-cdmx/
+├── index.html                      Mapa interactivo (autocontenible; lo sirve GitHub Pages)
+├── notebook/
+│   └── tianguis_nse_cdmx.ipynb     Cuaderno con todo el análisis espacial
+└── data/
+    ├── tianguis_cdmx.csv                  Padrón de tianguis (SEDECO, 2023)
+    ├── GRS_AGEB_urbana_2020.xlsx          Grado de Rezago Social por AGEB (CONEVAL, 2020)
+    ├── ageb_urbanas_cdmx.json             Polígonos de AGEB urbanas (INEGI, Marco Geoestadístico 2020)
+    ├── resultados_ageb_tianguis.csv       Tabla de resultados por AGEB (salida del notebook)
+    └── resultados_ageb_tianguis.gpkg      Capa geoespacial de resultados (salida del notebook)
+```
+
+## 🔁 Reproducir el análisis
+
+```bash
+pip install geopandas libpysal esda pandas numpy matplotlib openpyxl jupyter
+jupyter notebook notebook/tianguis_nse_cdmx.ipynb
+```
+
+## 📊 Fuentes de datos
+
+- **SEDECO** — Padrón de tianguis de la CDMX (2023), Portal de Datos Abiertos de la CDMX (ADIP): https://datos.cdmx.gob.mx/
+- **INEGI** — Marco Geoestadístico 2020, AGEB urbanas: https://www.inegi.org.mx/temas/mg/
+- **CONEVAL** — Grado de Rezago Social por AGEB (2020): https://www.coneval.org.mx/
+
+## 👥 Integrantes
+
+Contreras Trejo David Ruben · García Juanillo Alan · Nieves Bartolo Marco Antonio ·
+Reyes Leon Angel Eduardo · Reynoso Ortega Valeria
